@@ -19,7 +19,7 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 
 def get_medicine_details(med_name):
     try:
-        df = pd.read_csv(r"C:\Users\Varsh\Desktop\namesfinal.csv", encoding='ISO-8859-1')
+        df = pd.read_csv("namesfinal.csv", encoding='ISO-8859-1')
         matched = df[df.iloc[:, 0].str.lower().str.contains(med_name.lower())]
 
         if matched.empty:
